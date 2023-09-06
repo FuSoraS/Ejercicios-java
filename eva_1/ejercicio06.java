@@ -1,19 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
 package eva.pkg1.eva_1;
 
-/**
- *
- * @author leandro
- */
-public class ejercicio06 {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class ejercicio06 {
     public static void main(String args[]) {
-        // TODO code application logic here
-    }
+        Scanner scanner = new Scanner(System.in);
+        int año;
+        System.out.println("Ingrese su año: ");
+        año = scanner.nextInt();
+
+        boolean Bisiesto = (año % 4 == 0 && año % 100 != 0) || (año % 400 == 0);
+ 
+        if (Bisiesto) {
+            System.out.println(" es un año bisiesto.");
+        } else {
+            System.out.println(" no es un año bisiesto.");
+        }
+
+        }    
 }
